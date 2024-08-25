@@ -1,0 +1,6 @@
+.text-editor {
+  height: 150px;
+  width: 100%;
+  white-space: wrap;
+  font-size: 20px;
+}

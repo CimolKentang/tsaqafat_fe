@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Naskh+Arabic:wght@400..700&display=swap');
+
+@import 'quill/dist/quill.bubble.css';
+@import 'quill/dist/quill.snow.css';
+
+
+/* FONT FAMILY */
+[quill-editor-toolbar] .ql-font span[data-label="Aref Ruqaa"]::before {
+  font-family: "Aref Ruqaa";
+}
+
+[quill-editor-toolbar] .ql-font span[data-label="Mirza"]::before {
+  font-family: "Mirza";
+}
+
+[quill-editor-toolbar] .ql-font span[data-label="Roboto"]::before {
+  font-family: "Roboto";
+}
+
+[quill-editor-toolbar] .ql-font span[data-label="Naskh"]::before {
+  font-family: "Noto Naskh Arabic";
+}
+
+[quill-editor-toolbar] .ql-font span[data-label="Kufi"]::before {
+  font-family: "Noto Kufi Arabic";
+}
+
+.ql-font-mirza {
+  font-family: "Mirza";
+}
+
+.ql-font-aref {
+  font-family: "Aref Ruqaa";
+}
+
+.ql-font-roboto {
+  font-family: "Roboto";
+}
+
+.ql-font-naskh {
+  font-family: "Noto Naskh Arabic";
+}
+
+.ql-font-kufi {
+  font-family: "Noto Kufi Arabic";
+}
+
+/* FONT SIZE DEFAULT */
+[quill-editor-toolbar] .ql-size span[data-label="normal"]::before {
+  font-size: 10px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="large"]::before {
+  font-size: 20px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="huge"]::before {
+  font-size: 30px;
+}
+
+.ql-size-normal {
+  font-size: 10px;
+}
+
+.ql-size-large {
+  font-size: 20px;
+}
+
+.ql-size-huge {
+  font-size: 30px;
+}
+
+/* FONT SIZE CUSTOM */
+[quill-editor-toolbar] .ql-size span[data-label="10"]::before {
+  font-size: 10px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="15"]::before {
+  font-size: 15px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="16"]::before {
+  font-size: 16px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="17"]::before {
+  font-size: 17px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="18"]::before {
+  font-size: 18px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="19"]::before {
+  font-size: 19px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="20"]::before {
+  font-size: 20px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="25"]::before {
+  font-size: 25px;
+}
+
+[quill-editor-toolbar] .ql-size span[data-label="30"]::before {
+  font-size: 30px;
+}
+
+.ql-size-10px {
+  font-size: 10px;
+}
+
+.ql-size-15px {
+  font-size: 15px;
+}
+
+.ql-size-16px {
+  font-size: 16px;
+}
+
+.ql-size-17px {
+  font-size: 17px;
+}
+
+.ql-size-18px {
+  font-size: 18px;
+}
+
+.ql-size-19px {
+  font-size: 19px;
+}
+
+.ql-size-20px {
+  font-size: 20px;
+}
+
+.ql-size-25px {
+  font-size: 25px;
+}
+
+.ql-size-30px {
+  font-size: 30px;
+}
+
+/* FORMATS */
+.ql-direction-rtl {
+  direction: rtl;
+}
+
+.ql-align-right {
+  text-align: right;
+}
+
+/* OTHER CONFIGS */
+.ql-editor.ql-blank::before {
+  font-style: normal;
+  font-size: 18px;
+  font-family: "Noto Naskh Arabic";
+  text-align: right;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

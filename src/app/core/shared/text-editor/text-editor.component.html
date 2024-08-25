@@ -1,0 +1,48 @@
+<quill-editor 
+  class="text-editor"
+  [formControl]="inputControl"
+  (onEditorCreated)="onEditorCreated($event)"  
+  [placeholder]="placeholder"
+>
+  <div quill-editor-toolbar>
+
+    <span class="ql-formats">
+      <button type="button" class="ql-bold"><svg viewBox="0 0 18 18"> <path class="ql-stroke" d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path> <path class="ql-stroke" d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path> </svg></button>
+      <button type="button" class="ql-italic"></button>
+      <button type="button" class="ql-underline"></button>
+    </span>
+
+    <span class="ql-formats">
+      <button class="ql-direction" value="rtl"></button>
+      <select class="ql-align"></select>
+    </span>
+
+    <span class="ql-formats">
+      <button class="ql-list" value="bullet"></button>
+      <button class="ql-list" value="ordered"></button>
+    </span>
+
+    <span class="ql-formats">
+      <select class="ql-font">
+        <option selected value="naskh">Naskh</option>
+        <option value="kufi">Kufi</option>
+        <option value="aref">Aref Ruqaa</option>
+      </select>
+      <select class="ql-size">
+        <option value="10px">10</option>
+        <option value="15px">15</option>
+        <option value="16px">16</option>
+        <option value="17px">17</option>
+        <option selected value="18px">18</option>
+        <option value="19px">19</option>
+        <option value="20px">20</option>
+        <option value="25px">25</option>
+      </select>
+    </span>
+
+    <span class="ql-formats">
+      <button class="ql-link"></button>
+    </span>
+
+  </div>
+</quill-editor>
