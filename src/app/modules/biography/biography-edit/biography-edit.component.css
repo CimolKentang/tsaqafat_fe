@@ -1,0 +1,12 @@
+input,
+input::placeholder {
+  direction: rtl;
+  text-align: right;
+}
+
+.select-field {
+  display: flex;
+  justify-content: end;
+  /* align-items: center; */
+  /* flex-direction: row-reverse; */
+}

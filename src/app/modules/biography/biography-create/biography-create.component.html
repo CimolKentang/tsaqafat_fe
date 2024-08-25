@@ -1,86 +1,53 @@
-<div class="row m-0 justify-content-center py-3">
-  <div class="col-3"></div>
-  <div class="col-6 px-2">
-    <div class="border rounded py-2 px-4">
-      <form [formGroup]="form">
-        <div class="mb-3 text-end">
-          <label for="name" class="form-label">الاسم</label>
-          <input [formControl]="form.get('name')" type="text" class="form-control" id="name" placeholder="اسم الشخص">
-        </div>
-    
-        <div class="mb-3 text-end" *ngIf="fields != undefined && fields.length > 0">
-          <p class="form-label text-end">وظيفة الشخص</p>
-          <div class="row justify-content-end align-items-center m-0">
-            <div class="col-4 p-0 select-field" *ngFor="let field of fields; index as i">
-              <label for="field-{{i}}" class="form-label" style="margin-top: 4px;">{{field.name}}</label> 
-              <input 
-                type="checkbox" 
-                class="ms-2 cursor-pointer"
-                id="field-{{i}}" 
-                (change)="onSelectField($event.target.checked, field.id)" 
-              />
-            </div>
-          </div>
-        </div>
 
-        <div class="mb-3 text-end" *ngIf="generations != undefined && generations.length > 0">
-          <label for="generation" class="form-label">القرن</label>
-          <select class="form-select" id="generation" [formControl]="form.get('generation_id')" aria-label="Default select example">
-            <option selected [value]="null" class="text-end">القرن الذي عاش فيه الشخص</option>
-            <option *ngFor="let gen of generations" [value]="gen.id" class="text-end">{{gen.name}}</option>
-          </select>
-        </div>
-    
-        <div class="mb-3 text-end">
-          <label for="birth" class="form-label">المولد</label>
-          <input [formControl]="form.get('birth')" type="text" class="form-control" id="birth" placeholder="متى ولد الشخص">
-        </div>
-    
-        <div class="mb-3 text-end">
-          <label for="death" class="form-label">الوفاة</label>
-          <input [formControl]="form.get('death')" type="text" class="form-control" id="death" placeholder="متى توفي الشخص">
-        </div>
-    
-        <div class="mb-3 position-relative">
-          <app-text-editor 
-            placeholder="نبذة قصيرة عن حياة الشخص"
-            [inputControl]="form.get('description')"
-          ></app-text-editor>
-        </div>
-    
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-primary" [disabled]="form.invalid" (click)="onSubmit()">حفظ</button>
-        </div>
-      </form>
+<div class="border rounded py-2 px-4">
+  <form [formGroup]="form">
+    <div class="mb-3 text-end">
+      <label for="name" class="form-label">الاسم</label>
+      <input [formControl]="form.get('name')" type="text" class="form-control" id="name" placeholder="اسم الشخص">
     </div>
-  </div>
-  <div class="col-3">
-    <div class="border rounded py-2 px-4 mb-2">
-      <form [formGroup]="fieldForm">
-        <div class="mb-3 text-end">
-          <label for="field-name" class="form-label">الوظيفة</label>
-          <input [formControl]="fieldForm.get('name')" type="text" class="form-control" id="field-name" placeholder="اسم الوظيفة">
+    
+    <div class="mb-3 text-end" *ngIf="fields != undefined && fields.length > 0">
+      <p class="form-label text-end">وظيفة الشخص</p>
+      <div class="row justify-content-end align-items-center m-0">
+        <div class="col-4 p-0 select-field" *ngFor="let field of fields; index as i">
+          <label for="field-{{i}}" class="form-label" style="margin-top: 4px;">{{field.name}}</label> 
+          <input 
+            type="checkbox" 
+            class="ms-2 cursor-pointer"
+            id="field-{{i}}" 
+            (change)="onSelectField($event.target.checked, field.id)" 
+          />
         </div>
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-primary" [disabled]="fieldForm.invalid" (click)="onSubmitField()">حفظ</button>
-        </div>
-      </form>
+      </div>
     </div>
 
-    <div class="border rounded py-2 px-4">
-      <form [formGroup]="generationForm">
-        <div class="mb-3 text-end">
-          <label for="generation-name" class="form-label">القرن</label>
-          <input [formControl]="generationForm.get('name')" type="text" class="form-control" id="generation-name" placeholder="اسم القرن">
-        </div>
-        <div class="mb-3 text-end">
-          <label for="generation-order" class="form-label">الرتبة</label>
-          <input [formControl]="generationForm.get('order')" type="text" class="form-control" id="generation-order" placeholder="رتبة القرن">
-        </div>
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-primary" [disabled]="generationForm.invalid" (click)="onSubmitGeneration()">حفظ</button>
-        </div>
-      </form>
+    <div class="mb-3 text-end" *ngIf="generations != undefined && generations.length > 0">
+      <label for="generation" class="form-label">القرن</label>
+      <select class="form-select" id="generation" [formControl]="form.get('generation_id')" aria-label="Default select example">
+        <option selected [value]="null" class="text-end">القرن الذي عاش فيه الشخص</option>
+        <option *ngFor="let gen of generations" [value]="gen.id" class="text-end">{{gen.name}}</option>
+      </select>
     </div>
-  </div>
+    
+    <div class="mb-3 text-end">
+      <label for="birth" class="form-label">المولد</label>
+      <input [formControl]="form.get('birth')" type="text" class="form-control" id="birth" placeholder="متى ولد الشخص">
+    </div>
+    
+    <div class="mb-3 text-end">
+      <label for="death" class="form-label">الوفاة</label>
+      <input [formControl]="form.get('death')" type="text" class="form-control" id="death" placeholder="متى توفي الشخص">
+    </div>
+    
+    <div class="mb-3 position-relative">
+      <app-text-editor 
+        placeholder="نبذة قصيرة عن حياة الشخص"
+        [inputControl]="form.get('description')"
+      ></app-text-editor>
+    </div>
+    
+    <div class="d-flex justify-content-end">
+      <button type="button" class="btn btn-primary" [disabled]="form.invalid" (click)="onSubmit()">حفظ</button>
+    </div>
+  </form>
 </div>

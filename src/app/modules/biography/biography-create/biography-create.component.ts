@@ -55,14 +55,12 @@ export class BiographyCreateComponent implements OnInit {
 
   getFields() {
     this.fieldService.getFields().subscribe(result => {
-      console.log(result);
       this.fields = result.resource;
     });
   }
 
   getGenerations() {
     this.generationService.getGenerations().subscribe(result => {
-      console.log(result);
       this.generations = result.resource;
     });
   }

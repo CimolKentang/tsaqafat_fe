@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { BiographyService } from '../../../core/services/biography.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-biography-detail',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, RouterModule],
   templateUrl: './biography-detail.component.html',
   styleUrl: './biography-detail.component.css'
 })
@@ -28,5 +28,13 @@ export class BiographyDetailComponent implements OnInit {
     this.biographyService.getBiographyById(id).subscribe(result => {
       this.biography = result.resource;
     });
+  }
+
+  get fields() {
+    if (this.biography) {
+      return this.biography.fields.map((f: any) => f.name).join('، ')
+    }
+
+    return '';
   }
 }

@@ -48,31 +48,6 @@
   font-family: "Noto Kufi Arabic";
 }
 
-/* FONT SIZE DEFAULT */
-[quill-editor-toolbar] .ql-size span[data-label="normal"]::before {
-  font-size: 10px;
-}
-
-[quill-editor-toolbar] .ql-size span[data-label="large"]::before {
-  font-size: 20px;
-}
-
-[quill-editor-toolbar] .ql-size span[data-label="huge"]::before {
-  font-size: 30px;
-}
-
-.ql-size-normal {
-  font-size: 10px;
-}
-
-.ql-size-large {
-  font-size: 20px;
-}
-
-.ql-size-huge {
-  font-size: 30px;
-}
-
 /* FONT SIZE CUSTOM */
 [quill-editor-toolbar] .ql-size span[data-label="10"]::before {
   font-size: 10px;
@@ -163,6 +138,23 @@
   text-align: right;
 }
 
+/* GLOBAL STYLES */
 .cursor-pointer {
   cursor: pointer;
+}
+
+.naskh {
+  font-family: 'Noto Naskh Arabic';
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-19 {
+  font-size: 19px;
+}
+
+.font-20 {
+  font-size: 20px;
 }
